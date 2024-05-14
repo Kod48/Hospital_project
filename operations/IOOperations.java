@@ -1,5 +1,5 @@
 package operations;
 
-public interface IOOperations {
+public interface IOOperations{
 
 }
