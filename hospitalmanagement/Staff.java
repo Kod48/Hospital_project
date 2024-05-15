@@ -1,8 +1,10 @@
 package hospitalmanagement;
 
+import operations.IOOperations;
+
 public  abstract class Staff extends Person{
 
-    //private IOoperations[] operations;
+    protected IOOperations[] operations;
     private int id;
     private double salary;
 
