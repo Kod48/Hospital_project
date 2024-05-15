@@ -5,6 +5,7 @@ public class Doctor extends Staff {
     private String[] dailyAppointment;//
     private String status;
 
+
     public Doctor(String citizenNumber, String name, String surname,
                   String email, String phone, String gender, int age,
                   int id, double salary,String status) {
@@ -18,6 +19,7 @@ public class Doctor extends Staff {
 
     public Doctor(String citizenNumber, String name,String surname,String phone){
         super(citizenNumber, name, surname, phone);
+
     }
 
     public String getStatus() {
@@ -38,11 +40,14 @@ public class Doctor extends Staff {
     //end of the getters and setters
 
     @Override
+
     public void menu(Database data, Staff staff) {
         System.out.println("menu");
     }
 
     @Override
+
+
     public String toString() {
         return super.toString() +
                 "Status:" + this.status + "\n";

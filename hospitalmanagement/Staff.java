@@ -3,16 +3,16 @@ package hospitalmanagement;
 import operations.IOOperations;
 
 public  abstract class Staff extends Person{
+
     protected IOOperations[] operations;
+  
     private double salary;
-    public Staff(String citizenNumber, String name,String surname,String phone){
-        super(citizenNumber, name, surname, phone);
-        this.salary = salary;
-    }
+  
     public Staff(String citizenNumber, String name,String surname, String email, String phone, String gender, int age,double salary) {
         super(citizenNumber, name, surname, email, phone, gender, age);
         this.salary = salary;
     }
+
     public double getSalary() {
         return salary;
     }
@@ -21,7 +21,6 @@ public  abstract class Staff extends Person{
         this.salary = salary;
     }
 
-    //end of the getter and setter
 
     //@Override
     public abstract void menu(Database data,Staff staff);
@@ -33,5 +32,4 @@ public  abstract class Staff extends Person{
     }
 
     public abstract String toString2();
-
 }

@@ -7,11 +7,14 @@ public class Admin extends Staff{
     }
 
     @Override
+
     public void menu(Database data, Staff staff) {
         System.out.println("menu");
     }
 
     @Override
+
+
     public String toString2() {
         return null;
     }
