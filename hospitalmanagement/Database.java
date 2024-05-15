@@ -17,7 +17,7 @@ public class Database {
                     if (citizienNumber.equals(data[0]) ) {
                         switch (dataType){
                             case "Staff":
-                                if (data[3] == "Doctor"){
+                                if (data[3].equals("Doctor")){
                                     Doctor doctor = new Doctor(data[0],data[1],data[2],data[4]);
                                     return doctor;
                                 }
