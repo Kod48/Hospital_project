@@ -7,8 +7,29 @@ public abstract class Person {
     private String email;
     private String phone;
     private String gender;
-    private String id ;
     private int age;
+
+
+    public Person(String citizenNumber ,String name,String surname,String email,
+                  String phone,String gender,int age) {
+        this.citizenNumber = citizenNumber;
+        this.setName(name);
+        this.name = getName();
+        this.setSurname(surname);
+        this.surname = getSurname();
+        this.email = email;
+        this.phone = phone;
+        this.setGender(gender);
+        this.gender = getGender();
+        this.age = age;
+    }
+
+    public Person(String citizenNumber, String name, String surname, String phone) {
+        this.citizenNumber = citizenNumber;
+        this.name = name;
+        this.surname = surname;
+        this.phone = phone;
+    }
 
     public String getCitizenNumber() {
         return citizenNumber;
@@ -23,7 +44,8 @@ public abstract class Person {
     }
 
     public void setName(String name) {
-        this.name = name;
+
+        this.name = name.substring(0, 1).toUpperCase() + name.substring(1);
     }
 
     public String getSurname() {
@@ -31,7 +53,7 @@ public abstract class Person {
     }
 
     public void setSurname(String surname) {
-        this.surname = surname;
+        this.surname = surname.substring(0, 1).toUpperCase() + surname.substring(1);
     }
 
     public String getEmail() {
@@ -51,11 +73,12 @@ public abstract class Person {
     }
 
     public String getGender() {
-        return gender;
+        return this.gender;
     }
 
     public void setGender(String gender) {
-        this.gender = gender;
+
+        this.gender = gender.substring(0, 1).toUpperCase() + gender.substring(1);
     }
 
     public int getAge() {
@@ -66,4 +89,17 @@ public abstract class Person {
         this.age = age;
     }
 
+    //end of the getters and setters
+
+
+    @Override
+    public String toString() {
+        return  "Name:" + this.name+ "\n"+
+                "Surname:" + this.surname+"\n"+
+                "Citizen Number:" + this.citizenNumber+"\n"+
+                "Email:" + this.email+"\n"+
+                "Phone:" + this.phone+"\n"+
+                "Age:" + this.age+"\n"+
+                "Gender:" + this.gender+"\n";
+    }
 }
