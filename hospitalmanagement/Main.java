@@ -11,7 +11,7 @@ public class Main {
 
         System.out.println("Please enter your citizen number: ");
         String staffCitizenNumber = scanner.nextLine();
-        Object obj = database.read("Staff", "23678256821");
+        Object obj = database.read("Staff", staffCitizenNumber);
 
         if (obj != null) {
             if (obj instanceof Doctor) {
