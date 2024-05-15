@@ -6,7 +6,6 @@ public class Secretary extends  Staff{
     public Secretary(/*IOoperations[] operations,*/String citizenNumber, String name, String surname,
                      String email, String phone, String gender,
                      int age, int id, double salary) {
-
         super(citizenNumber, name, surname, email, phone, gender, age, salary);
     }
     public Secretary(String citizenNumber, String name,String surname,String phone){
