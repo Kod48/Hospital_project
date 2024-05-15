@@ -21,6 +21,12 @@ public class Main {
                 Secretary secretary = (Secretary) obj;
                 secretary.menu(database);
             }
+            else if (obj instanceof Admin) {
+                Admin admin = (Admin) obj;
+                admin.menu(database);
+            }
         }
+
+       // database.delete("Staff","46386327549");
     }
 }

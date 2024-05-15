@@ -5,12 +5,14 @@ public class Admin extends Staff{
                  String email, String phone, String gender, int age, double salary) {
         super(citizenNumber, name, surname, email, phone, gender, age, salary);
     }
-
+    public Admin(String citizenNumber, String name,String surname,String phone){
+        super(citizenNumber, name, surname, phone);
+    }
     @Override
 
-    public void menu(Database data) {
+    public void menu(Database database) {
 
-        System.out.println("menu");
+        System.out.println("Adminn menu");
     }
 
     @Override
