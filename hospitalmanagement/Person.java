@@ -24,6 +24,15 @@ public abstract class Person {
         this.age = age;
     }
 
+
+    public Person(String citizenNumber, String name, String surname, String phone) {
+        this.citizenNumber = citizenNumber;
+        this.name = name;
+        this.surname = surname;
+        this.phone = phone;
+    }
+
+
     public String getCitizenNumber() {
         return citizenNumber;
     }

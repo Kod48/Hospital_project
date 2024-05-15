@@ -1,22 +1,17 @@
 package hospitalmanagement;
 import operations.*;
-
 import java.util.Scanner;
+import operations.IOOperations;
 
 public class Doctor extends Staff {
     private final int MAX_PATIENT=5;
     private String[] dailyAppointment;//
     private String status;
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    public Doctor(IOOperations operations[],String citizenNumber, String name, String surname,
-                                                String email, String phone, String gender, int age,
-                                                int id, double salary, String status) {
-        super(citizenNumber, name, surname, email, phone, gender, age, id, salary);
+    public Doctor(String citizenNumber, String name, String surname,
+                           String email, String phone, String gender, int age,
+                            double salary, String status) {
+        super(citizenNumber, name, surname, email, phone, gender, age, salary);
         this.status = status;
         this.operations = new IOOperations[]{
                 new Exit(),
@@ -25,7 +20,17 @@ public class Doctor extends Staff {
                 new CreateRecipe(),
                 new ShowSchedule()
         };
+    }
 
+    public Doctor(String citizenNumber, String name,String surname,String phone){
+        super(citizenNumber, name, surname, phone);
+      this.operations = new IOOperations[]{
+                new Exit(),
+                new ShowPatientInfo(),
+                new AddDiagnosis(),
+                new CreateRecipe(),
+                new ShowSchedule()
+        };
 
     }
 
@@ -60,6 +65,14 @@ public class Doctor extends Staff {
 
 
     @Override
+
+    public void menu(Database data, Staff staff) {
+        System.out.println("menu");
+    }
+
+    @Override
+
+
     public String toString() {
         return super.toString() +
                 "Status:" + this.status + "\n";
