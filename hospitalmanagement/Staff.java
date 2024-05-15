@@ -5,7 +5,7 @@ import operations.IOOperations;
 public  abstract class Staff extends Person{
 
     protected IOOperations[] operations;
-  
+
     private double salary;
   
     public Staff(String citizenNumber, String name,String surname, String email, String phone, String gender, int age,double salary) {
