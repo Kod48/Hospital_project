@@ -11,8 +11,16 @@ public class Main {
 
         System.out.println("Please enter your citizen number: ");
         String staffCitizenNumber = scanner.nextLine();
+        Object obj = database.read("Staff", "23678256821");
 
-        //database.read("Staff", "23678256821").menu();
-
+        if (obj != null) {
+            if (obj instanceof Doctor) {
+                Doctor doctor = (Doctor) obj;
+                doctor.menu(database);
+            } else if (obj instanceof Secretary) {
+                Secretary secretary = (Secretary) obj;
+                secretary.menu(database);
+            }
+        }
     }
 }

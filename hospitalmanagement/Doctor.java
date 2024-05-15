@@ -4,6 +4,7 @@ import java.util.Scanner;
 import operations.IOOperations;
 
 public class Doctor extends Staff {
+    Database database;
     private final int MAX_PATIENT=5;
     private String[] dailyAppointment;//
     private String status;
@@ -34,6 +35,7 @@ public class Doctor extends Staff {
 
     }
 
+
     public String getStatus() {
         return status;
     }
@@ -41,7 +43,7 @@ public class Doctor extends Staff {
     public void setStatus(String status) {
         this.status = status;
     }
-    public void menu(Database data,Staff staff){
+    public void menu(Database database){
         System.out.println("0. Exit");
         System.out.println("1. Show Patient Information");
         System.out.println("2. Add Diagnosis");
@@ -50,7 +52,7 @@ public class Doctor extends Staff {
 
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
-        this.operations[choice-1].oper(database, staff);
+        this.operations[choice-1].oper(database);
         scanner.close();;
     }
 
@@ -63,16 +65,7 @@ public class Doctor extends Staff {
     }
     //end of the getters and setters
 
-
     @Override
-
-    public void menu(Database data, Staff staff) {
-        System.out.println("menu");
-    }
-
-    @Override
-
-
     public String toString() {
         return super.toString() +
                 "Status:" + this.status + "\n";

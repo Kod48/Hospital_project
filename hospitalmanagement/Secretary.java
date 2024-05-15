@@ -13,7 +13,7 @@ public class Secretary extends  Staff{
         super(citizenNumber, name, surname, phone);
     }
     @Override
-    public void menu(Database data, Staff staff) {
+    public void menu(Database data) {
         System.out.println("menu");
 
     }

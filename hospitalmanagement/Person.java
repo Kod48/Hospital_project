@@ -9,7 +9,9 @@ public abstract class Person {
     private String gender;
     private int age;
 
+    public Person(){
 
+    }
     public Person(String citizenNumber ,String name,String surname,String email,
                   String phone,String gender,int age) {
         this.citizenNumber = citizenNumber;
