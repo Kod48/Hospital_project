@@ -9,7 +9,9 @@ public abstract class Person {
     private String gender;
     private int age;
 
+    public Person(){
 
+    }
     public Person(String citizenNumber ,String name,String surname,String email,
                   String phone,String gender,int age) {
         this.citizenNumber = citizenNumber;
@@ -23,6 +25,15 @@ public abstract class Person {
         this.gender = getGender();
         this.age = age;
     }
+
+
+    public Person(String citizenNumber, String name, String surname, String phone) {
+        this.citizenNumber = citizenNumber;
+        this.name = name;
+        this.surname = surname;
+        this.phone = phone;
+    }
+
 
     public String getCitizenNumber() {
         return citizenNumber;

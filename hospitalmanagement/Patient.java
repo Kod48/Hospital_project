@@ -5,4 +5,10 @@ public class Patient extends Person{
                    String email, String phone, String gender, int age) {
         super(citizenNumber, name, surname, email, phone, gender, age);
     }
+
+    public Patient(String citizenNumber, String name,String surname,String phone){
+        super(citizenNumber, name, surname, phone);
+    }
+
+
 }
