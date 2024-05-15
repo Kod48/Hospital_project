@@ -1,17 +1,15 @@
 package hospitalmanagement;
 
+import operations.IOOperations;
+
 public  abstract class Staff extends Person{
 
-    //private IOoperations[] operations;
-    private int id;
+    protected IOOperations[] operations;
+  
     private double salary;
-
-    public Staff(/*IOoperations[] operations,*/String citizenNumber, String name,
-                 String surname, String email, String phone,
-                 String gender, int age,int id,double salary) {
-
+  
+    public Staff(String citizenNumber, String name,String surname, String email, String phone, String gender, int age,double salary) {
         super(citizenNumber, name, surname, email, phone, gender, age);
-        this.id = id;
         this.salary = salary;
     }
 
@@ -23,25 +21,15 @@ public  abstract class Staff extends Person{
         this.salary = salary;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-    //end of the getter and setter
 
     //@Override
-    //public abstract void menu(Database data,Staff staff){}
+    public abstract void menu(Database data,Staff staff);
 
     @Override
     public String toString() {
         return super.toString() +
-                "ID:" + this.id + "\n"+
                 "Salary:" + this.salary+ " $" + "\n";
     }
 
     public abstract String toString2();
-
 }
