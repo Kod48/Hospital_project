@@ -7,6 +7,6 @@ public class Exit implements IOOperations{
 
     @Override
     public void oper(Database database) {
-
+        System.out.println("Exit");
     }
 }
