@@ -73,6 +73,18 @@ public class Doctor extends Staff {
 
     @Override
     public String toString2() {
+        /*
+        StringBuilder result = new StringBuilder();
+        result.append("Citizen Number: ").append(this.getCitizenNumber()).append("\n");
+        result.append("Patient Name: ").append(this.getPatient().getName()).append("\n");
+        result.append("Patient Surname: ").append(this.getPatient().getSurname()).append("\n");
+        result.append("Doctor Name: ").append(this.getName()).append("\n");
+        result.append("Diagnosis: ").append(this.getDiagnosis() == null ? "null" : this.getDiagnosis()).append("\n");
+        result.append("Recipe: ").append(this.getRecipe() == null ? "null" : this.getRecipe()).append("\n");
+        result.append("Date: ").append(this.getImportDate()).append("\n");
+        return result.toString();
+
+         */
         return null;
     }
 
