@@ -28,7 +28,7 @@ public class Admin extends Staff{
     }
     @Override
 
-    public void menu(Database database) {
+    public void menu(Database database,Object staff) {
         System.out.println("0. Exit");
         System.out.println("1. Hire");
         System.out.println("2. Fire");
@@ -37,7 +37,7 @@ public class Admin extends Staff{
 
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
-        this.operations[choice].oper(database);
+        this.operations[choice].oper(database,staff);
         scanner.close();;
     }
 

@@ -31,7 +31,7 @@ public  abstract class Staff extends Person{
 
 
     //@Override
-    public abstract void menu(Database data);
+    public abstract void menu(Database data,Object staff);
 
     @Override
     public String toString() {
