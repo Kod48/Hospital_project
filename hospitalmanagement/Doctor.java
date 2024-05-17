@@ -43,7 +43,7 @@ public class Doctor extends Staff {
     public void setStatus(String status) {
         this.status = status;
     }
-    public void menu(Database database){
+    public void menu(Database database,Object staff){
         System.out.println("0. Exit");
         System.out.println("1. Show Patient Information");
         System.out.println("2. Add Diagnosis");
@@ -52,7 +52,7 @@ public class Doctor extends Staff {
 
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
-        this.operations[choice-1].oper(database);
+        this.operations[choice].oper(database, staff);
         scanner.close();;
     }
 

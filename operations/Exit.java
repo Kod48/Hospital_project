@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Exit implements IOOperations{
 
     @Override
-    public void oper(Database database) {
+    public void oper(Database database,Object staff) {
 
     }
 }
